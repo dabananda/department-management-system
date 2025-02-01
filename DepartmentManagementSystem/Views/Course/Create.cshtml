@@ -1,0 +1,26 @@
+﻿@model Course
+
+<div class="container">
+	<div class="card w-50 mx-auto">
+		<div class="card-body">
+			<h5 class="card-title mb-4 text-center">Add New Course</h5>
+			<form asp-controller="Course" asp-action="Create" method="post">
+				<div class="mb-3">
+					<label class="form-label">Course Title</label>
+					<input asp-for="CourseTitle" class="form-control" />
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Course Code</label>
+					<input asp-for="CourseCode" class="form-control" />
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Credit Hours</label>
+					<input asp-for="CreditHours" class="form-control" />
+				</div>
+				<div class="d-grid col-6 mx-auto">
+					<button class="btn btn-primary" type="submit">ADD COURSE</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

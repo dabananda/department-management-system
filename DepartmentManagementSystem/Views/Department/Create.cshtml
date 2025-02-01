@@ -1,0 +1,39 @@
+﻿@model Department
+
+<div class="container">
+	<div class="card w-50 mx-auto">
+		<div class="card-body">
+			<h5 class="card-title mb-4 text-center">Add New Department</h5>
+			<form asp-controller="Department" asp-action="Create" method="post">
+				<div class="mb-3">
+					<label asp-for="DepartmentName" class="form-label"></label>
+					<input asp-for="DepartmentName" class="form-control" />
+				</div>
+				<div class="mb-3">
+					<label asp-for="Description" class="form-label"></label>
+					<input asp-for="Description" class="form-control" />
+				</div>
+				<div class="mb-3">
+					<label asp-for="EstablishedDate" class="form-label"></label>
+					<input asp-for="EstablishedDate" class="form-control" />
+				</div>
+				<div class="mb-3">
+					<label asp-for="DepartmentPhone" class="form-label"></label>
+					<input asp-for="DepartmentPhone" class="form-control" />
+				</div>
+				<div class="mb-3">
+					<label asp-for="DepartmentEmail" class="form-label"></label>
+					<input asp-for="DepartmentEmail" class="form-control" />
+				</div>
+				<div class="mb-3">
+					<label asp-for="DepartmentWebsite" class="form-label"></label>
+					<input asp-for="DepartmentWebsite" class="form-control" />
+				</div>
+				
+				<div class="d-grid col-6 mx-auto">
+					<button class="btn btn-primary" type="submit">ADD DEPARTMENT</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+﻿@model List<Course>
+
+<div class="container">
+	<div class="my-4 d-flex justify-content-between">
+		<h3 class="mb-0">ALL COURSES</h3>
+		<a asp-controller="Course" asp-action="Create" class="btn btn-success"><i class="bi bi-plus-circle"></i> ADD COURSE</a>
+	</div>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Course Code</th>
+				<th>Course Title</th>
+				<th>Credit Hours</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var course in Model)
+			{
+				<tr>
+					<td>@course.CourseCode</td>
+					<td>@course.CourseTitle</td>
+					<td>@course.CreditHours</td>
+					<td>
+						<a asp-controller="Course" asp-action="Edit" class="btn btn-sm btn-primary me-2" asp-route-id="@course.Id">
+							<i class="bi bi-pencil-square"></i> Edit
+						</a>
+						<a asp-controller="Course" asp-action="Delete" class="btn btn-sm btn-danger" asp-route-id="@course.Id">
+							<i class="bi bi-trash"></i> Delete
+						</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
